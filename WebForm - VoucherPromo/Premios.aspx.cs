@@ -28,5 +28,11 @@ namespace WebForm___VoucherPromo
             }
 
         }
+
+        protected void btnLoQuiero_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

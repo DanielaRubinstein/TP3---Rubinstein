@@ -17,9 +17,9 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-            <asp:TextBox runat="server" ClientIDMode="Static" ID="email" type="email" CssClass="validate"/>
+            <asp:TextBox runat="server" ClientIDMode="Static" placeholder="Email" ID="email" type="email" CssClass="validate"/>
 <%--          <input id="email" type="email" class="validate">--%>
-          <label for="email">Email</label>
+          <label for="email"></label>
         </div>
       </div>
       <div class="row">
@@ -48,10 +48,31 @@
       </div>
   </div>
 
-    <asp:Button Text="Enviar" runat="server" CssClass="btn waves-effect waves-light" OnClick="btnEnviar_Click" type="submit" name="action"/>   
+    <asp:Button Text="Enviar" runat="server" CssClass="btn waves-effect waves-light" OnClientClick="return btnAceptar_Datos()" OnClick="btnEnviar_Click" type="submit" name="action"/>   
 
 <%--  <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
     <i class="material-icons right">send</i>
   </button>--%>
 
+ <script>
+
+     function btnAceptar_Datos() {
+         var Nombre = document.getElementById("first_name").value;
+         var Apellido = document.getElementById("last_name").value;
+
+         if (Nombre === "" || Apellido === "") {
+             //Hacer pagina de error con estos datos
+             //alert("Debe completar esos campos");
+             return false;
+         }
+         else {
+             return true;
+         }
+
+     }
+
+</script>
+
 </asp:Content>
+
+
