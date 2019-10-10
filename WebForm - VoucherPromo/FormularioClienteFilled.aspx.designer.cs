@@ -10,7 +10,7 @@
 namespace WebForm___VoucherPromo {
     
     
-    public partial class FormularioCliente {
+    public partial class FormularioClienteFilled {
         
         /// <summary>
         /// DNI control.

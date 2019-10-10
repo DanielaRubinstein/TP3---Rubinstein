@@ -30,14 +30,12 @@ namespace WebForm___VoucherPromo
                 {
                     Session["Error" + Session.SessionID] = "El codigo es invalido";
                     Response.Redirect("Error.aspx");
-                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "M.toast({ html: 'Voucher inválido' })", true);
                 }
             }
             else
             {
                 Session["Error" + Session.SessionID] = "Campo vacio";
                 Response.Redirect("Error.aspx");
-                //ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "M.toast({html: Campo vacio})", true);
             }
 
         }

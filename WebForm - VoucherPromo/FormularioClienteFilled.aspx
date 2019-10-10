@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FormularioCliente.aspx.cs" Inherits="WebForm___VoucherPromo.FormularioCliente" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FormularioClienteFilled.aspx.cs" Inherits="WebForm___VoucherPromo.FormularioClienteFilled" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <div class="row">
+     <div class="row">
        <div class="row">
         <div class="input-field col s12">
-            <asp:TextBox runat="server"  AutoPostBack="true" ClientIDMode="Static" placeholder="DNI" ID="DNI" CssClass="validate" OnTextChanged="txtDni_TextChanged"/>
+            <asp:TextBox runat="server"  AutoPostBack="true" ClientIDMode="Static" placeholder="DNI" ID="DNI" CssClass="validate"/>
 <%--          <input placeholder="DNI" id="DNI">--%>
-          <label for="DNI"></label>
+          <label for="DNI"><%= cliente.DNI %></label>
         </div>
       </div>
       <div class="row">
@@ -48,36 +47,7 @@
       </div>
   </div>
 
-<asp:Button Text="Enviar" runat="server" CssClass="btn waves-effect waves-light" OnClientClick="return btnAceptar_Datos()" OnClick="btnEnviar_Click" type="submit" name="action"/>   
+<asp:Button Text="Enviar" runat="server" CssClass="btn waves-effect waves-light"  type="submit" name="action"/>   
 
-<%--  <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-    <i class="material-icons right">send</i>
-  </button>--%>
-
- <script>
-
-
-
-
-     function btnAceptar_Datos() {
-         var DNI = document.getElementById("DNI").value;
-
-         var Nombre = document.getElementById("first_name").value;
-         var Apellido = document.getElementById("last_name").value;
-
-         if (Nombre === "" || Apellido === "")
-         {
-             //Hacer pagina de error con estos datos
-             //alert("Debe completar esos campos");
-             return false;
-         }
-         else
-         {
-             return true;
-         }
-     }
-</script>
 
 </asp:Content>
-
-

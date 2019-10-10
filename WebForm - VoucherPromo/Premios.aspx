@@ -18,7 +18,7 @@
           <p><%= item.Descripcion %></p>
         </div>
         <div class="card-action">
-            <asp:Button Text="LO QUIERO!" runat="server" CssClass="waves-effect waves-light btn" OnClick="btnLoQuiero_Click"/>
+            <a class="waves-effect waves-light btn" href="FormularioCliente.aspx?idPremio=<% = item.ID.ToString() %>">LO QUIERO!</a>
         </div>
       </div>
     </div>

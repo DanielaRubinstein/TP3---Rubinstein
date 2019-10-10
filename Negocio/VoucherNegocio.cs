@@ -15,7 +15,7 @@ namespace Negocio
             try
             {
                 Voucher cupon = null;
-                accesoDatos.SetearConsulta("select CodigoVoucher from Vouchers where Estado=1 and CodigoVoucher=" + codVoucher);
+                accesoDatos.SetearConsulta("select CodigoVoucher from Vouchers where Estado=0 and CodigoVoucher=" + codVoucher);
                 accesoDatos.AbrirConexion();
                 accesoDatos.ejecutarConsulta();
                 if (accesoDatos.Lector.Read())

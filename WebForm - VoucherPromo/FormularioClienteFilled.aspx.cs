@@ -7,27 +7,27 @@ using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
 
-
 namespace WebForm___VoucherPromo
 {
-    public partial class Premios : System.Web.UI.Page
+    public partial class FormularioClienteFilled : System.Web.UI.Page
     {
-        public List<Producto> listaPremios { get; set; }
+        public List<Cliente> listaCliente;
+        public Cliente cliente;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                ProductoNegocio premio = new ProductoNegocio();
-                listaPremios = premio.listar();
+                ClienteNegocio cliente = new ClienteNegocio();
+                //var clienteViejo = Convert.ToInt32(Request.QueryString["DNI"]);
+                listaCliente = cliente.listar();
+                
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
-        }
 
-        protected void btnLoQuiero_Click(object sender, EventArgs e)
-        {
 
         }
     }

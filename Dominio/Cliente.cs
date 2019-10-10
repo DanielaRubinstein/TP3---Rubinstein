@@ -9,13 +9,13 @@ namespace Dominio
     public class Cliente
     {
         public Int64 Id { get; set; }
-        public string DNI { get; set; }
+        public int DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
-        public int CP { get; set; }
+        public string CP { get; set; }
         public DateTime Fecha_registro { get; set; }
     }
 }

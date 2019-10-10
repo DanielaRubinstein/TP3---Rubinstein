@@ -51,8 +51,11 @@ END;
 
 
 select * from Productos
-
-
 insert into Productos(Titulo, Descripcion, URLImagen) values('Excursión en Pingüinera - Ushuaia','Navegación por el Beagle y avistaje de pingüinos para dos personas','https://ushuaiaturismo.com/wp-content/uploads/2019/06/pinguinos-6.jpg')
 insert into Productos(Titulo, Descripcion, URLImagen) values('Kayak y cena en Delta Tigre','Clase de kayak, recorrido por ríos internos del Delta y cena de 3 pasos para dos personas','https://sudeste-kayak.com.ar/wp-content/uploads/2018/07/medio-dia.jpg')
 insert into Productos(Titulo, Descripcion, URLImagen) values('Escalada en roca en Sierra la Vigilancia Bs As','Trekking por las sierras, escalada y rapel con instructor para una persona','https://escaladauruguay.files.wordpress.com/2017/10/dsc05799.jpg?w=1200')
+
+
+insert into Clientes(DNI,Nombre,Apellido,Direccion,Ciudad,CodigoPostal,Email,FechaRegistro)
+values(35392047,'Daniela','Rubinstein','Ecuador 1642','Don Torcuato','1611','mrubinstein@gmail.com',GETDATE())
+
